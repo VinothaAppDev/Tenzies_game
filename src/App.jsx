@@ -4,6 +4,7 @@ import Die from "./assets/components/die/Die"
 import { nanoid } from "nanoid"
 // import { useWindowSize } from 'react-use'
 import Confetti from 'react-confetti'
+import { Analytics } from "@vercel/analytics/react"
 
 export default function App() {
 
@@ -77,6 +78,7 @@ export default function App() {
         {components}
       </div>
       <button ref={isWon ? focusEnter : null} onClick={roller} className="rollMeBtn">{isWon ? "New Game" : "Roll"}</button>
+      <Analytics />
     </main>
   )
 }
